@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "nome": "HEITTOR",
+      "senha": "6000"
+    },
+    {
+      "id": "1",
+      "nome": "PEDRO",
+      "senha": "5500"
+    },
+    {
+      "id": "2",
+      "nome": "DANIEL",
+      "senha": "4500"
+    },
+    {
+      "id": "3",
+      "nome": "ANDREAS",
+      "senha": "5000"
+    },
+    {
+      "id": 6,
+      "nome": "Morango",
+      "valor": "10",
+      "quantidade": "2"
+    },
+    {
+      "id": 6,
+      "nome": "Melancia",
+      "valor": "8",
+      "quantidade": "3"
+    }
+  ]
+}
