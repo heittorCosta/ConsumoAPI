@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class produto extends StatefulWidget {
-  String ?nome;
-  int ?qtd;
-  int ?valor;
+  final String ?nome;
+  final String ?qtd;
+  final String ?valor;
   produto({super.key, this.nome, this.qtd, this.valor});
 
   @override

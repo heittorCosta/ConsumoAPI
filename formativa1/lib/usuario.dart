@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:formativa1/produto.dart';
 
 class usuario extends StatefulWidget {
   const usuario({super.key});
@@ -15,17 +16,22 @@ TextEditingController prod = TextEditingController();
 TextEditingController qtd = TextEditingController();
 TextEditingController valor = TextEditingController();
 _post() {
-    Map<String, dynamic> produto = {"id": 6, "nome": "${prod.text}", "valor": "${valor.text}", "quantidade": "${qtd.text}"};
+    Map<String, dynamic> produtos = {"id": 6, "nome": "${prod.text}", "valor": "${valor.text}", "quantidade": "${qtd.text}"};
 
     http.post(
       Uri.parse(url),
       headers: <String, String>{
         'Content-type': 'application/json; charset=UTF-8'
       },
-      body: jsonEncode(produto),
+      body: jsonEncode(produtos),
     );
+    Navigator.push(context, MaterialPageRoute(builder: (context) => produto(
+    nome: prod.text,
+    qtd: qtd.text,
+    valor: valor.text,
+    )));
 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => produto("${prod.text}", "${qtd.text}", "${valor.text}")));
+    // Navigator.push(context, MaterialPageRoute(builder: (context) => produto("${prod.text}", "${qtd.text}", "${valor.text}")));
   }
   @override
   Widget build(BuildContext context) {
